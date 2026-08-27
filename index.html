@@ -42,8 +42,14 @@
       --teal-dim: #e54e2a;
       --teal-glow: rgba(255,95,59,0.15);
     }
-    /* Theme switcher */
-    .theme-switcher { display:flex; align-items:center; gap:6px; padding:4px 10px; background:var(--white-05); border:1px solid var(--white-10); border-radius:999px; }
+    /* Theme switcher (Fixed bottom right) */
+    .theme-switcher {
+      position:fixed; bottom:24px; right:24px; z-index:9999;
+      display:flex; align-items:center; gap:8px; padding:6px 14px;
+      background:rgba(10,15,30,0.85); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+      border:1px solid var(--white-10); border-radius:999px;
+      box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    }
     .theme-swatch {
       width:22px; height:22px; border-radius:50%; cursor:pointer;
       border:2px solid transparent; transition:all 0.2s;
@@ -54,7 +60,7 @@
     .theme-swatch-a { background:linear-gradient(135deg,#0f1729 50%,#00d4ff 50%); }
     .theme-swatch-b { background:linear-gradient(135deg,#102a1c 50%,#f0a500 50%); }
     .theme-swatch-c { background:linear-gradient(135deg,#0d0d0d 50%,#ff5f3b 50%); }
-    .theme-label { font-size:10px; color:var(--white-40); font-weight:600; letter-spacing:0.06em; text-transform:uppercase; margin-right:4px; white-space:nowrap; }
+    .theme-label { font-size:11px; color:var(--white-70); font-weight:600; letter-spacing:0.06em; text-transform:uppercase; margin-right:4px; white-space:nowrap; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: var(--navy); color: var(--white); font-family: var(--font-en); line-height: 1.6; overflow-x: hidden; }
@@ -335,10 +341,28 @@
       nav { padding: 14px 20px; }
       .nav-links { display: none; }
       section { padding: 72px 20px; }
-      .mission-grid, .about-grid, .product-card { grid-template-columns: 1fr; }
+      .mission-grid, .about-grid, .product-card { grid-template-columns: 1fr; gap: 48px; }
       .product-visual { min-height: 280px; }
-      .tech-grid { grid-template-columns: 1fr; }
+      .tech-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
+      
+      /* Mobile Alignment Tweaks */
+      .section-label { justify-content: center; display: flex; width: 100%; margin-bottom: 12px; }
+      .section-title, .section-title-en { text-align: center; }
+      .section-desc, .section-desc-zh { text-align: center; margin: 0 auto 32px; max-width: 100%; }
+      .mission-stats { margin-top: 32px; gap: 12px; }
+      .stat-card { text-align: center; padding: 20px; }
+      .product-info { padding: 40px 24px; text-align: center; align-items: center; }
+      .product-tag { margin: 0 auto 24px; }
+      .feature-list { width: fit-content; margin: 0 auto 40px; text-align: left; }
+      .tech-card { text-align: center; padding: 24px; }
+      .tech-icon { margin: 0 auto 16px; }
+      .value-item { flex-direction: column; align-items: center; text-align: center; }
+      .contact-row { grid-template-columns: 1fr; }
+      .contact-form { width: 100%; margin: 0 auto 32px; }
+      
+      .theme-switcher { bottom: 16px; right: 16px; padding: 5px 12px; gap: 6px; }
+      .theme-label { display: none; /* Hide label on mobile to save space */ }
     }
   </style>
 </head>
@@ -379,14 +403,6 @@
       <li><a href="#about" class="zh-only">關於</a><a href="#about" class="en-only">About</a></li>
       <li><a href="#contact" class="nav-cta zh-only">聯絡我們</a><a href="#contact" class="nav-cta en-only">Contact</a></li>
     </ul>
-    <!-- Theme switcher -->
-    <div class="theme-switcher" title="切換品牌配色 / Switch theme">
-      <span class="theme-label zh-only">配色</span>
-      <span class="theme-label en-only">Theme</span>
-      <button id="swatch-A" class="theme-swatch theme-swatch-a active" onclick="setTheme('A')" title="Tech Premium（深藍 + 電光青）"></button>
-      <button id="swatch-B" class="theme-swatch theme-swatch-b" onclick="setTheme('B')" title="Taiwanese Gold（翠綠 + 暖金）"></button>
-      <button id="swatch-C" class="theme-swatch theme-swatch-c" onclick="setTheme('C')" title="Bold Energy（炭黑 + 珊瑚橙）"></button>
-    </div>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">中文</button>
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -713,6 +729,15 @@
     <li><a href="#contact"><span class="zh-only">聯絡</span><span class="en-only">Contact</span></a></li>
   </ul>
 </footer>
+
+<!-- Theme switcher (Fixed) -->
+<div class="theme-switcher" title="切換品牌配色 / Switch theme">
+  <span class="theme-label zh-only">配色</span>
+  <span class="theme-label en-only">Theme</span>
+  <button id="swatch-A" class="theme-swatch theme-swatch-a active" onclick="setTheme('A')" title="Tech Premium（深藍 + 電光青）"></button>
+  <button id="swatch-B" class="theme-swatch theme-swatch-b" onclick="setTheme('B')" title="Taiwanese Gold（翠綠 + 暖金）"></button>
+  <button id="swatch-C" class="theme-swatch theme-swatch-c" onclick="setTheme('C')" title="Bold Energy（炭黑 + 珊瑚橙）"></button>
+</div>
 
 <!-- EmailJS SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
