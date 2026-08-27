@@ -168,13 +168,15 @@
       border: none; border-radius: 12px; font-size: 15px; font-weight: 700;
       cursor: pointer; text-decoration: none; transition: all 0.2s; letter-spacing: 0.02em;
     }
-    .btn-primary:hover { background: #33ddff; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,255,0.3); }
     .btn-secondary {
       padding: 14px 32px; background: var(--white-05); color: var(--white);
       border: 1px solid var(--white-10); border-radius: 12px; font-size: 15px;
       font-weight: 500; cursor: pointer; text-decoration: none; transition: all 0.2s;
     }
-    .btn-secondary:hover { background: var(--white-10); transform: translateY(-2px); }
+    @media (hover: hover) {
+      .btn-primary:hover { background: #33ddff; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,255,0.3); }
+      .btn-secondary:hover { background: var(--white-10); transform: translateY(-2px); }
+    }
 
     .hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0.35; animation: fadeIn 1s 1s ease both; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--white), transparent); animation: scrollAnim 1.5s ease infinite; }
@@ -471,7 +473,7 @@
       </div>
       <div class="reveal">
         <div class="mission-card">
-          <div class="mission-quote zh-only">「好勢」不只是一個名字，<br>是我們對每個用戶的<span class="teal">承諾</span>。</div>
+          <div class="mission-quote zh-only">「好勢」不只是一個名字，<br>是我們對每個用戶的<span class="teal" style="white-space: nowrap;">承諾</span>。</div>
           <div class="mission-quote-en en-only">"Ho-sè" isn't just a name.<br>It's our <span class="teal">promise</span> to every user.</div>
           <p class="mission-caption-zh zh-only">我們不只是做產品，我們讓使用者感到安心、自信，處於有利的位置。</p>
           <p class="mission-caption en-only">We don't just ship features. We give people the confidence that comes from knowing they're in good hands.</p>
@@ -488,7 +490,7 @@
       <p class="section-label" style="justify-content:center;">
         <span class="zh-only">旗艦產品</span><span class="en-only">Flagship Product</span>
       </p>
-      <h2 class="section-title zh-only" style="text-align:center;">首款產品：U BoBi（有保庇）</h2>
+      <h2 class="section-title zh-only" style="text-align:center;">首款產品：U BoBi<span style="white-space: nowrap;">（有保庇）</span></h2>
       <h2 class="section-title-en en-only" style="text-align:center;">Introducing U BoBi</h2>
       <p class="section-desc-zh zh-only" style="margin:0 auto;text-align:center;">全台第一個 AI 即時碰撞預警 App，讓每個用路人都能得到保護。</p>
       <p class="section-desc en-only" style="margin:0 auto;text-align:center;">Taiwan's first AI-powered real-time collision alert app — protecting every road user, every trip.</p>
