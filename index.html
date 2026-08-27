@@ -488,8 +488,8 @@
         <div class="mission-card">
           <div class="mission-quote zh-only">「好勢」不只是一個名字，是我們對每個用戶的<span class="teal" style="white-space: nowrap;">承諾</span>。</div>
           <div class="mission-quote-en en-only">"Ho-sè" isn't just a name.<br>It's our <span class="teal">promise</span> to every user.</div>
-          <p class="mission-caption-zh zh-only">我們不只是做產品，我們讓使用者感到安心、自信，處於有利的位置。</p>
-          <p class="mission-caption en-only">We don't just ship features. We give people the confidence that comes from knowing they're in good hands.</p>
+          <p class="mission-caption-zh zh-only">我們不只是做產品，我們想讓每一個用路人，對自己的每一趣路都能感到安心。</p>
+          <p class="mission-caption en-only">We don't just ship features. We want every road user to feel genuinely safe on every single trip.</p>
         </div>
       </div>
     </div>
@@ -513,7 +513,7 @@
         <div class="product-tag">🛡️ Live Product · iOS</div>
         <h3 class="product-name-zh">有保庇</h3>
         <p class="product-name-en">U BoBi — Your Road Guardian</p>
-        <p class="product-desc-zh zh-only">無論你是行人、駕駛、騎 YouBike 還是機車騎士，U BoBi 在背景即時分析附近所有用路人的移動軌跡，在碰撞發生前的 5–10 秒向雙方發出緊急警報。</p>
+        <p class="product-desc-zh zh-only">無論你是行人、汽車駕駛、騎 YouBike 還是機車騎士，U BoBi 在背景即時分析附近所有用路人的移動軌跡，在碰撞發生前的 5–10 秒向雙方發出緊急警報。</p>
         <p class="product-desc-en en-only">Whether you're walking, driving, or cycling — U BoBi silently tracks nearby road users in the background, triggering a critical alert 5–10 seconds before a potential collision occurs.</p>
         <div class="feature-list">
           <div class="feature-item">
@@ -529,7 +529,7 @@
           <div class="feature-item">
             <div class="feature-dot"></div>
             <span class="zh-only feature-item-zh">全螢幕紅色警報 UI，強制引起注意</span>
-            <span class="en-only">Full-screen red alarm UI that demands immediate attention</span>
+            <span class="en-only">Full-screen red alert UI that demands immediate attention</span>
           </div>
           <div class="feature-item">
             <div class="feature-dot"></div>
@@ -597,12 +597,12 @@
         <span class="tech-tag">Firebase FCM · APNs</span>
       </div>
       <div class="tech-card reveal">
-        <span class="tech-icon">☁️</span>
-        <h3 class="tech-title zh-only">彈性雲端架構</h3>
-        <h3 class="tech-title-en en-only">Elastic Cloud Infrastructure</h3>
-        <p class="tech-desc-zh zh-only">部署在 Google Cloud Run，流量少的時候幾乎不花錢，用戶變多時自動增加伺服器應付，不需要手動管理。GitHub Actions 自動化部署，每次更新穩定可靠。</p>
-        <p class="tech-desc-en en-only">Deployed on Google Cloud Run — costs nearly nothing when quiet, scales up automatically as users grow, with zero manual server management. CI/CD via GitHub Actions.</p>
-        <span class="tech-tag">Cloud Run · Docker · GCP</span>
+        <span class="tech-icon">⚡</span>
+        <h3 class="tech-title zh-only">亞秒級位置同步協議</h3>
+        <h3 class="tech-title-en en-only">Sub-second Location Sync</h3>
+        <p class="tech-desc-zh zh-only">每個用戶的 GPS 位置以亞秒級頻率送入後端。Redis 快取層將附近用路人的軌跡緩衝全部保在記憶體中，不落磁碟，確保風險計算永遠能取得最新狀態。</p>
+        <p class="tech-desc-en en-only">Each user's GPS coordinates are pushed to the backend at sub-second intervals. Redis keeps nearby users' full trajectory buffers in memory — zero disk I/O — so risk calculations always run on the freshest possible data.</p>
+        <span class="tech-tag">Redis · In-memory · Sub-second TTL</span>
       </div>
       <div class="tech-card reveal">
         <span class="tech-icon">📊</span>
@@ -673,10 +673,9 @@
           <p class="founder-bio-zh zh-only">工程師出身的創辦人，對台灣交通安全問題有強烈的使命感。以一人之力完成 U BoBi 的 iOS App、Go 後端與 AI 演算法原型開發。相信科技最大的價值，是讓每個人的日常都更安心一點。</p>
           <p class="founder-bio-en en-only">Engineer-turned-founder with a deep sense of mission around road safety. Built the U BoBi iOS app, Go backend, and AI algorithm prototype as a solo developer. Believes the highest value of technology is making everyday life a little safer for everyone.</p>
           <div class="founder-tags">
-            <span class="founder-tag">iOS · SwiftUI</span>
-            <span class="founder-tag">Go · PostgreSQL</span>
             <span class="founder-tag">AI / ML</span>
             <span class="founder-tag">台灣 · Taiwan</span>
+            <span class="founder-tag">INFP</span>
           </div>
         </div>
       </div>
