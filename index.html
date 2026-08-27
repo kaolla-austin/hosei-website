@@ -256,10 +256,11 @@
     }
     .phone-mockup {
       width: 200px; background: #111827; border-radius: 36px; border: 2px solid rgba(255,255,255,0.1);
-      padding: 16px 12px; position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.5); z-index: 1;
+      padding: 18px 12px 48px; position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.5); z-index: 1;
+      min-height: 380px;
     }
-    .phone-notch { width: 60px; height: 6px; background: #000; border-radius: 999px; margin: 0 auto 16px; }
-    .phone-screen-alert { background: linear-gradient(180deg, #7f0000, #cc0000); border-radius: 20px; padding: 24px 16px; text-align: center; animation: alertPulse 2s ease infinite; }
+    .phone-notch { width: 60px; height: 6px; background: #000; border-radius: 999px; margin: 0 auto 24px; }
+    .phone-screen-alert { background: linear-gradient(180deg, #c0392b, #e74c3c); border-radius: 20px; padding: 48px 16px 52px; text-align: center; animation: alertPulse 2s ease infinite; }
     @keyframes alertPulse { 0%,100%{opacity:1} 50%{opacity:0.85} }
     .alert-icon { font-size: 36px; margin-bottom: 12px; display: block; }
     .alert-title-zh { font-family: var(--font-zh); font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; }
@@ -463,7 +464,8 @@
         <p class="section-desc en-only">At Ho-sè Technology, we believe the most valuable tech isn't the flashiest — it's the kind that fits seamlessly into people's lives and makes a real difference.</p>
         <div class="mission-stats">
           <div class="stat-card">
-            <div class="stat-num">人</div>
+            <div class="stat-num zh-only">人</div>
+            <div class="stat-num en-only">People</div>
             <div class="stat-label zh-only">我們每個決策的起點</div>
             <div class="stat-label-en en-only">The center of every decision</div>
           </div>
@@ -473,12 +475,14 @@
             <div class="stat-label-en en-only">Powering every core feature</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">你</div>
+            <div class="stat-num zh-only">你</div>
+            <div class="stat-num en-only">You</div>
             <div class="stat-label zh-only">每一個在路上的你，都値得被守護</div>
             <div class="stat-label-en en-only">Every person on the road matters</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num">在乎</div>
+            <div class="stat-num zh-only">在乎</div>
+            <div class="stat-num en-only">Care</div>
             <div class="stat-label zh-only">因為在乎，才有好勢科技</div>
             <div class="stat-label-en en-only">Caring is why Ho-sè exists</div>
           </div>
@@ -551,8 +555,6 @@
             <div class="alert-title-en en-only">Oncoming Traffic!</div>
             <div class="alert-sub-zh zh-only">偵測到車輛靠近，請注意安全。</div>
             <div class="alert-sub-en en-only">A vehicle is approaching,<br>please be aware.</div>
-            <div class="alert-btn-zh zh-only">我很安全</div>
-            <div class="alert-btn-en en-only">I'm Safe</div>
           </div>
         </div>
       </div>
@@ -600,7 +602,7 @@
         <span class="tech-icon">⚡</span>
         <h3 class="tech-title zh-only">位置更新比眼睛還快</h3>
         <h3 class="tech-title-en en-only">Faster Than a Blink</h3>
-        <p class="tech-desc-zh zh-only">人類眼睛反應約 150ms。我們的後端在 100ms 內就能分析完所有用路人的位置資料並判斷風險——這讓警報有足夠的時間射出去。</p>
+        <p class="tech-desc-zh zh-only">人類眼睛反應約 150ms。我們的後端在 100ms 內就能分析完所有用路人的位置資料並判斷風險，這讓警報有足夠的時間傳遞。</p>
         <p class="tech-desc-en en-only">Human eyes take ~150ms to react. Our backend analyzes every nearby user's position and calculates collision risk in under 100ms — leaving enough time for the alert to reach you before impact.</p>
         <span class="tech-tag">100ms · Redis · Go</span>
       </div>
@@ -670,7 +672,7 @@
           </div>
           <h3 class="founder-name">Austin</h3>
           <p class="founder-title">Founder & CEO · Ho-sè Technology</p>
-          <p class="founder-bio-zh zh-only">看到覺得不對勁的事，他就忘不了。Austin 是一個 INFP 型的工程師創辦人，比起方案和計畫，他更相信把對的事真正做出來的力量。好勢科技，是這個相信最具體的體現。</p>
+          <p class="founder-bio-zh zh-only">看到覺得不對勁的事，他就忘不了。Austin 是一個 INFP 型的工程師創辦人，比起漂亮的計畫書，他更想把腦中對的事情真正做出來。好勢科技，是這個相信最具體的體現。</p>
           <p class="founder-bio-en en-only">When Austin sees something that feels wrong, he cannot help but try to fix it. An INFP engineer-turned-founder, he would rather build the thing than write the plan. Ho-se Technology is what happens when that instinct meets a real problem worth solving.</p>
           <div class="founder-tags">
             <span class="founder-tag">AI / ML</span>
