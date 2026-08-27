@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>好勢科技 Ho-sè Technology — 讓每件事都好勢</title>
   <meta name="description" content="好勢科技是一家以 AI 技術為核心、用人文溫度打造 SaaS 產品的台灣科技新創。首款產品 U BoBi（有保庇）——你的智能路上守護者。" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -23,6 +24,10 @@
       --white-05: rgba(255,255,255,0.04);
       --font-en: 'Inter', sans-serif;
       --font-zh: 'Noto Sans TC', sans-serif;
+      --logo-g1-start: #0f1729;
+      --logo-g1-end: #00d4ff;
+      --logo-g2-start: #00a8cc;
+      --logo-g2-end: #00eeff;
     }
     /* ── THEME B: Taiwanese Gold ── */
     [data-theme="B"] {
@@ -32,6 +37,10 @@
       --teal: #f0a500;
       --teal-dim: #d4920a;
       --teal-glow: rgba(240,165,0,0.15);
+      --logo-g1-start: #102a1c;
+      --logo-g1-end: #f0a500;
+      --logo-g2-start: #d4920a;
+      --logo-g2-end: #ffd040;
     }
     /* ── THEME C: Bold Energy ── */
     [data-theme="C"] {
@@ -41,6 +50,10 @@
       --teal: #ff5f3b;
       --teal-dim: #e54e2a;
       --teal-glow: rgba(255,95,59,0.15);
+      --logo-g1-start: #0d0d0d;
+      --logo-g1-end: #ff5f3b;
+      --logo-g2-start: #e54e2a;
+      --logo-g2-end: #ff8a70;
     }
     /* Theme switcher (Fixed bottom right) */
     .theme-switcher {
@@ -378,12 +391,12 @@
     <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#0f1729"/>
-          <stop offset="100%" stop-color="#00d4ff"/>
+          <stop offset="0%" stop-color="var(--logo-g1-start)"/>
+          <stop offset="100%" stop-color="var(--logo-g1-end)"/>
         </linearGradient>
         <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#00a8cc"/>
-          <stop offset="100%" stop-color="#00eeff"/>
+          <stop offset="0%" stop-color="var(--logo-g2-start)"/>
+          <stop offset="100%" stop-color="var(--logo-g2-end)"/>
         </linearGradient>
       </defs>
       <!-- Left diamond -->
