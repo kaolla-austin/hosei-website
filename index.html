@@ -255,12 +255,11 @@
       background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(0,212,255,0.01)); position: relative;
     }
     .phone-mockup {
-      width: 200px; background: #111827; border-radius: 36px; border: 2px solid rgba(255,255,255,0.1);
-      padding: 18px 12px 48px; position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.5); z-index: 1;
-      min-height: 380px;
+      width: 200px; height: 420px; background: #111827; border-radius: 36px; border: 4px solid #111827;
+      position: relative; box-shadow: 0 40px 80px rgba(0,0,0,0.5); z-index: 1; overflow: hidden;
     }
-    .phone-notch { width: 60px; height: 6px; background: #000; border-radius: 999px; margin: 0 auto 24px; }
-    .phone-screen-alert { background: linear-gradient(180deg, #c0392b, #e74c3c); border-radius: 20px; padding: 48px 16px 52px; text-align: center; animation: alertPulse 2s ease infinite; }
+    .phone-notch { width: 70px; height: 20px; background: #000; border-radius: 0 0 12px 12px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 2; }
+    .phone-screen-alert { background: linear-gradient(180deg, #c0392b, #e74c3c); width: 100%; height: 100%; padding: 60px 16px 20px; text-align: center; animation: alertPulse 2s ease infinite; display: flex; flex-direction: column; justify-content: center; }
     @keyframes alertPulse { 0%,100%{opacity:1} 50%{opacity:0.85} }
     .alert-icon { font-size: 36px; margin-bottom: 12px; display: block; }
     .alert-title-zh { font-family: var(--font-zh); font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; }
@@ -517,8 +516,8 @@
         <div class="product-tag">🛡️ Live Product · iOS</div>
         <h3 class="product-name-zh">有保庇</h3>
         <p class="product-name-en">U BoBi — Your Road Guardian</p>
-        <p class="product-desc-zh zh-only">無論你是行人、汽車駕駛、騎 YouBike 還是機車騎士，U BoBi 在背景即時分析附近所有用路人的移動軌跡，在碰撞發生前的 5–10 秒向雙方發出緊急警報。</p>
-        <p class="product-desc-en en-only">Whether you're walking, driving, or cycling — U BoBi silently tracks nearby road users in the background, triggering a critical alert 5–10 seconds before a potential collision occurs.</p>
+        <p class="product-desc-zh zh-only">無論你是行人、汽車駕駛、騎 YouBike 還是機車騎士，<span style="white-space: nowrap;">U BoBi</span> 在背景即時分析附近所有用路人的移動軌跡，在碰撞發生前的 5–10 秒向雙方發出緊急警報。</p>
+        <p class="product-desc-en en-only">Whether you're walking, driving, or cycling — <span style="white-space: nowrap;">U BoBi</span> silently tracks nearby road users in the background, triggering a critical alert 5–10 seconds before a potential collision occurs.</p>
         <div class="feature-list">
           <div class="feature-item">
             <div class="feature-dot"></div>
@@ -578,16 +577,16 @@
         <span class="tech-icon">🧠</span>
         <h3 class="tech-title zh-only">AI 風險評估引擎</h3>
         <h3 class="tech-title-en en-only">AI Risk Assessment Engine</h3>
-        <p class="tech-desc-zh zh-only">責任鏈式三道過濾器：方向向量分析 → 橫向速度分解 → 3D 未來路徑預測。誤報率低，100ms 內完成風險評估。</p>
-        <p class="tech-desc-en en-only">A three-stage chain-of-responsibility pipeline: heading vector → lateral velocity → 3D path prediction. Fast, precise, low false-alert rate.</p>
+        <p class="tech-desc-zh zh-only">責任鏈式三道過濾器：方向向量分析 → 橫向速度分解 → 3D 未來路徑預測。100ms 內完成風險評估，精準鎖定真正的危險。</p>
+        <p class="tech-desc-en en-only">A three-stage chain-of-responsibility pipeline: heading vector → lateral velocity → 3D path prediction. Fast, precise, and highly reliable.</p>
         <span class="tech-tag">Go · PostGIS · Redis</span>
       </div>
       <div class="tech-card reveal">
         <span class="tech-icon">📍</span>
         <h3 class="tech-title zh-only">3D 空間感知</h3>
         <h3 class="tech-title-en en-only">3D Spatial Awareness</h3>
-        <p class="tech-desc-zh zh-only">利用 GPS 海拔數據進行三維碰撞預測，能正確區分天橋上的行人與地面車輛，大幅降低誤報率。</p>
-        <p class="tech-desc-en en-only">GPS altitude data enables true 3D collision modeling — correctly distinguishing a pedestrian on an overpass from a car below, cutting false alerts significantly.</p>
+        <p class="tech-desc-zh zh-only">利用 GPS 海拔數據進行三維碰撞預測，能正確區分天橋上的行人與地面車輛，大幅減少不必要的干擾。</p>
+        <p class="tech-desc-en en-only">GPS altitude data enables true 3D collision modeling — correctly distinguishing a pedestrian on an overpass from a car below, cutting out unnecessary alerts.</p>
         <span class="tech-tag">CoreLocation · PostGIS</span>
       </div>
       <div class="tech-card reveal">
@@ -610,15 +609,15 @@
         <span class="tech-icon">📊</span>
         <h3 class="tech-title zh-only">軌跡數據分析</h3>
         <h3 class="tech-title-en en-only">Trajectory Data Analysis</h3>
-        <p class="tech-desc-zh zh-only">Redis 快取每位用戶最近 10 筆軌跡點，搭配 Python 分析管道進行 EDA 與模型調優，持續降低誤報率。</p>
-        <p class="tech-desc-en en-only">Redis caches each user's last 10 GPS points for real-time prediction. A Python analysis pipeline handles EDA and model tuning to continuously reduce false alerts.</p>
+        <p class="tech-desc-zh zh-only">Redis 快取每位用戶最近 10 筆軌跡點，後台的 Python 系統會持續學習這些真實的移動模式，讓預警變得越來越聰明。</p>
+        <p class="tech-desc-en en-only">Redis caches each user's last 10 GPS points for real-time prediction. A background Python system continuously learns from these real-world movement patterns, making alerts smarter over time.</p>
         <span class="tech-tag">Python · Pandas · GeoPandas</span>
       </div>
       <div class="tech-card reveal">
         <span class="tech-icon">🤖</span>
         <h3 class="tech-title zh-only">ML 升級路線</h3>
         <h3 class="tech-title-en en-only">Next-Gen ML Roadmap</h3>
-        <p class="tech-desc-zh zh-only">下一代將導入 Transformer-based 軌跡預測模型，以 GPU 加速推論，取代現有規則式引擎，進一步大幅降低誤報率。</p>
+        <p class="tech-desc-zh zh-only">下一代將導入 Transformer-based 軌跡預測模型，以 GPU 加速推論，取代現有規則式引擎，這是我們追求「零誤報」的終極目標。</p>
         <p class="tech-desc-en en-only">Next generation will replace rule-based filters with a Transformer-based trajectory model, GPU-accelerated via TensorRT — dramatically improving accuracy and further reducing false alerts.</p>
         <span class="tech-tag">PyTorch · TensorRT · NVIDIA</span>
       </div>
@@ -672,8 +671,8 @@
           </div>
           <h3 class="founder-name">Austin</h3>
           <p class="founder-title">Founder & CEO · Ho-sè Technology</p>
-          <p class="founder-bio-zh zh-only">看到覺得不對勁的事，他就忘不了。Austin 是一個 INFP 型的工程師創辦人，比起漂亮的計畫書，他更想把腦中對的事情真正做出來。好勢科技，是這個相信最具體的體現。</p>
-          <p class="founder-bio-en en-only">When Austin sees something that feels wrong, he cannot help but try to fix it. An INFP engineer-turned-founder, he would rather build the thing than write the plan. Ho-se Technology is what happens when that instinct meets a real problem worth solving.</p>
+          <p class="founder-bio-zh zh-only">看到覺得不對勁的事，他就忘不了。Austin 是一個 INFP 型的工程師創辦人，比起漂亮的計畫書，他更想把腦中對的事情真正做出來。好勢科技，就是為了把這件事做到最好而誕生的。</p>
+          <p class="founder-bio-en en-only">When Austin sees something that feels wrong, he cannot help but try to fix it. An INFP engineer-turned-founder, he would rather build the thing than write the plan. Ho-se Technology was born simply to make that happen.</p>
           <div class="founder-tags">
             <span class="founder-tag">AI / ML</span>
             <span class="founder-tag">台灣 · Taiwan</span>
